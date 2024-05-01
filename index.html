@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Snake</title>
+    </head>
+    <body onload="setup()">
+        <p id="output"></p>
+        <canvas id="board" width="1280" height="640"></canvas>
+        <div id="pause">PAUSED</div>
+        <div id="game_over">
+            GAME OVER
+            <br><br>
+            SCORE:<p id="score"></p>
+            <button id="retry" onclick="retry()">RETRY</button>
+            <button id="settings_go" onclick="manage('settings', 'open')">SETTINGS</button>
+        </div>
+        <div id="settings">
+            <h1>SETTINGS</h1>
+            <p>Snake Color:<input type="color" id="sncol"></p>
+            <p>Apple Color:<input type="color" id="apcol"></p>
+            <p>Background Color:<input type="color" id="bgcol"></p>
+            <br>
+            <p>Speed: <input id="speed" type="range" min="1" max="30" class="slider"></p>
+            <br>
+            <button id="apply" onclick="apply()">APPLY</button>
+            <button id="reset" onclick="reset()">RESET</button>
+            <button id="close_set" onclick="manage('settings', 'close')">CLOSE</button>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
